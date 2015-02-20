@@ -28,13 +28,14 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'burnettk/vim-angular'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'flattr.vim'
+Plugin 'farseer90718/flattr.vim'
 Plugin 'goatslacker/mango.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'einars/js-beautify'
+Plugin 'altercation/vim-colors-solarized'
 
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
@@ -74,6 +75,7 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 set clipboard=unnamed
 
 syntax enable
+set regexpengine=1
 
 function! Spaces(...)
     let l:width = a:0 == 1 ? a:1 : 4
@@ -103,6 +105,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 set background=dark
 colorscheme flattr
+set t_Co=256
+
 :set mouse=nicr
 set relativenumber
 
